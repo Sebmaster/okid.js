@@ -1,0 +1,24 @@
+{
+	"name": "OKID",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Download image hoster albums",
+	
+	"permissions": ["tabs"],
+	
+	"content_scripts": [
+		{
+			"matches": ["http://minus.com/m*"],
+			"js": ["jquery.js", "downloader.js"]
+		}
+	],
+	
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	
+	"page_action": {
+		"default_icon": "arrow_down.png"
+	}
+}
